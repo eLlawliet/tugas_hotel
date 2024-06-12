@@ -1,12 +1,13 @@
 public class Vip extends Pelanggan{
-    private double diskon = 0.1;
-    private int noKamar;
-    public Vip(String name, int lama, String checkin, String checkout, String tipeKamar) {
-        super(name, lama, checkin, checkout, tipeKamar);
+    double diskon = 0.1;
+    public Vip(int lama) {
+        super(lama);
     }
 
-    public double dskn(int lama, int harga, double diskon) {
-        double hasil_diskon = (lama * harga * diskon);
+    public double dskn(int lama, int harga) {
+        this.lama = lama;
+        this.harga = harga;
+        double hasil_diskon = (harga * lama) - (this.lama * this.harga * diskon);
         return hasil_diskon;
     }
 }

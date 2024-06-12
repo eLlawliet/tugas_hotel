@@ -1,20 +1,14 @@
 public class Pelanggan{
-    String name;
     int lama;
-    String checkin;
-    String checkout;
-    String tipeKamar;
+    int harga;
 
-    public Pelanggan(String name, int lama, String checkin, String checkout, String tipeKamar){
-        this.name = name;
+    public Pelanggan(int lama) {
         this.lama = lama;
-        this.checkin = checkin;
-        this.checkout = checkout;
-        this.tipeKamar = tipeKamar;
     }
-
     public int biaya(int lama, int harga){
-        int hasil = lama * harga;
+        this.lama = lama;
+        this.harga = harga;
+        int hasil = this.lama * this.harga;
         return hasil;
     }
 
